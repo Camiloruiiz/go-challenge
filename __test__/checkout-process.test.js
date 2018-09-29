@@ -1,4 +1,4 @@
-import {priceList, getProductValue} from '../index.js'
+import {priceList, getProductValue, sumValues} from '../index.js'
 
 describe('Supermarket checkout process',()=> {
   
@@ -22,6 +22,12 @@ describe('Supermarket checkout process',()=> {
       expect(getProductValue('B')).toBe(priceList['B']);
       expect(getProductValue('C')).toBe(priceList['C']);
       expect(getProductValue('D')).toBe(priceList['D']);
+    })
+    describe('Shopping list with more than one product', ()=>{
+      test('total value of "AB" shopping list, should be 80', ()=>{
+        const shoppingList = "AB"
+        expect(sumValues(shoppingList)).toBe(80);
+      })
     })
   })
 
