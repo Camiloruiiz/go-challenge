@@ -1,4 +1,4 @@
-import {priceList} from '../index.js'
+import {priceList, getProductValue} from '../index.js'
 
 describe('Supermarket checkout process',()=> {
   
@@ -16,5 +16,12 @@ describe('Supermarket checkout process',()=> {
       expect(priceList['D']).toBe(15);
     })
   })
-  
+  describe('Get values from a shopping list', ()=> {
+    test('Product values should be equal to priceList values', ()=> {
+      expect(getProductValue('A')).toBe(priceList['A']);
+      expect(getProductValue('B')).toBe(priceList['B']);
+      expect(getProductValue('C')).toBe(priceList['C']);
+      expect(getProductValue('D')).toBe(priceList['D']);
+    })
+  })
 })
