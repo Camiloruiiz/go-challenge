@@ -35,7 +35,13 @@ export function sumValues(shoppingList) {
   if(listGroupByProduct['A']){
     let amoutnAProducts = listGroupByProduct['A'].length
     let totalASavings = Math.floor(amoutnAProducts/3)*20
-    return totalValue - totalASavings
+    totalValue = totalValue - totalASavings
+  }
+
+  if(listGroupByProduct['B']){
+    let amoutnAProducts = listGroupByProduct['B'].length
+    let totalASavings = Math.floor(amoutnAProducts/2)*15
+    totalValue = totalValue - totalASavings
   }
   
   return totalValue
