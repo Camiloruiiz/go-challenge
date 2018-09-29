@@ -18,5 +18,8 @@ export function sumValues(shoppingList) {
     totalValue += getProductValue(element)
   });
 
+  if (totalValue === 0){
+    return 'Shopping list is empty.'
+  }
   return totalValue
 }

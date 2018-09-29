@@ -1,6 +1,7 @@
 import {priceList, getProductValue, sumValues} from '../index.js'
 
 describe('Supermarket checkout process',()=> {
+  
   describe('Products values', ()=> {
     test('Product A value should be equal to 50', ()=> {
       expect(priceList['A']).toBe(50);
@@ -22,6 +23,10 @@ describe('Supermarket checkout process',()=> {
       expect(getProductValue('C')).toBe(priceList['C']);
       expect(getProductValue('D')).toBe(priceList['D']);
     })
+    test('Empty Shopping list should return a message', ()=> {
+      const shoppingList = ""
+      expect(sumValues(shoppingList)).toBe('Shopping list is empty.');
+    })
     describe('Shopping list with more than one product', ()=>{
       test('total value of "AB" shopping list, should be 80', ()=>{
         const shoppingList = "AB"
@@ -37,3 +42,4 @@ describe('Supermarket checkout process',()=> {
       })
     })
   })
+})
