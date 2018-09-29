@@ -12,37 +12,46 @@ export function getProductValue(product) {
 
 export function sumValues(shoppingList) {
   let listByProduct = shoppingList.split('')
-  let listGroupByProduct = {}
-  
+
   let totalValue = 0
 
   listByProduct.forEach(element => {
-    if (listGroupByProduct[element]){
+    totalValue += getProductValue(element)
+  })
+
+  if (totalValue === 0) {
+    return 'Shopping list is empty.'
+  }
+
+  totalValue = totalValue + applySavings(listByProduct)
+
+  return totalValue
+}
+
+export function applySavings(listByProduct) {
+  let listGroupByProduct = {}
+  let totalValue = 0
+
+
+  listByProduct.forEach(element => {
+    if (listGroupByProduct[element]) {
       listGroupByProduct[element] = listGroupByProduct[element] + element
     } else {
       listGroupByProduct[element] = element
     }
   })
-  
-  listByProduct.forEach(element => {
-    totalValue += getProductValue(element)
-  })
 
-  if (totalValue === 0){
-    return 'Shopping list is empty.'
-  }
-
-  if(listGroupByProduct['A']){
+  if (listGroupByProduct['A']) {
     let amoutnAProducts = listGroupByProduct['A'].length
-    let totalASavings = Math.floor(amoutnAProducts/3)*20
+    let totalASavings = Math.floor(amoutnAProducts / 3) * 20
     totalValue = totalValue - totalASavings
   }
 
-  if(listGroupByProduct['B']){
+  if (listGroupByProduct['B']) {
     let amoutnAProducts = listGroupByProduct['B'].length
-    let totalASavings = Math.floor(amoutnAProducts/2)*15
+    let totalASavings = Math.floor(amoutnAProducts / 2) * 15
     totalValue = totalValue - totalASavings
   }
-  
+
   return totalValue
 }
