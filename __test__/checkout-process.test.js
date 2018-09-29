@@ -10,4 +10,7 @@ describe('Supermarket checkout process',()=> {
   test('Product C value', ()=> {
     expect(priceList['C']).toBe(20);
   })
+  test('Product D value', ()=> {
+    expect(priceList['D']).toBe(15);
+  })
 })
