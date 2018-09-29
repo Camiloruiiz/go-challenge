@@ -44,7 +44,12 @@ describe('Supermarket checkout process',()=> {
         const shoppingList = "CDBA"
         expect(sumValues(shoppingList)).toBe(115);
       })
-
+    })
+    describe('Shopping list with multi priced products', ()=>{
+      test('total value of "AAA" shopping list, should be 130', ()=>{
+        const shoppingList = "AAA"
+        expect(sumValues(shoppingList)).toBe(130);
+      })
     })
   })
 })
