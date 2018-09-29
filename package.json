@@ -1,0 +1,26 @@
+{
+  "name": "go-compare-challenge",
+  "version": "1.0.0",
+  "description": "go compare challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Camiloruiiz/go-compare-challenge.git"
+  },
+  "author": "Oscar Camilo Ruiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Camiloruiiz/go-compare-challenge/issues"
+  },
+  "homepage": "https://gitlab.com/Camiloruiiz/go-compare-challenge#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^23.6.0"
+  }
+}
