@@ -50,6 +50,10 @@ describe('Supermarket checkout process',()=> {
         const shoppingList = "AAA"
         expect(sumValues(shoppingList)).toBe(130);
       })
+      test('total value of "BB" shopping list, should be 45', ()=>{
+        const shoppingList = "BB"
+        expect(sumValues(shoppingList)).toBe(45);
+      })
     })
   })
 })
