@@ -4,3 +4,8 @@ export const priceList = {
   C: 20,
   D: 15
 }
+
+export function getProductValue(product) {
+  let productValue = priceList[product]
+  return productValue
+}

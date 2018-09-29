@@ -24,4 +24,5 @@ describe('Supermarket checkout process',()=> {
       expect(getProductValue('D')).toBe(priceList['D']);
     })
   })
+
 })
