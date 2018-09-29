@@ -27,7 +27,7 @@ describe('Supermarket checkout process',()=> {
       const shoppingList = ""
       expect(sumValues(shoppingList)).toBe('Shopping list is empty.');
     })
-    describe('Shopping list with more than one product', ()=>{
+    describe('Shopping list with more than one products', ()=>{
       test('total value of "AB" shopping list, should be 80', ()=>{
         const shoppingList = "AB"
         expect(sumValues(shoppingList)).toBe(80);
@@ -40,6 +40,7 @@ describe('Supermarket checkout process',()=> {
         const shoppingList = "CD"
         expect(sumValues(shoppingList)).toBe(35);
       })
+
     })
   })
 })

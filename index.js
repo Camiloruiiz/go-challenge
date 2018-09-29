@@ -16,10 +16,11 @@ export function sumValues(shoppingList) {
 
   listByProduct.forEach(element => {
     totalValue += getProductValue(element)
-  });
+  })
 
   if (totalValue === 0){
     return 'Shopping list is empty.'
   }
+
   return totalValue
 }
