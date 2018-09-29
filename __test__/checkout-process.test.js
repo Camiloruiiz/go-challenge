@@ -1,4 +1,4 @@
-import {priceList, getProductValue, sumValues} from '../index.js'
+import {priceList, getProductValue, priceOf} from '../index.js'
 
 describe('Supermarket checkout process',()=> {
   
@@ -25,42 +25,42 @@ describe('Supermarket checkout process',()=> {
     })
     test('Empty Shopping list should return a message', ()=> {
       const shoppingList = ""
-      expect(sumValues(shoppingList)).toBe('Shopping list is empty.');
+      expect(priceOf(shoppingList)).toBe('Shopping list is empty.');
     })
     describe('Shopping list with more than one products', ()=>{
       test('total value of "AB" shopping list, should be 80', ()=>{
         const shoppingList = "AB"
-        expect(sumValues(shoppingList)).toBe(80);
+        expect(priceOf(shoppingList)).toBe(80);
       })
       test('total value of "BC" shopping list, should be 50', ()=>{
         const shoppingList = "BC"
-        expect(sumValues(shoppingList)).toBe(50);
+        expect(priceOf(shoppingList)).toBe(50);
       })
       test('total value of "CD" shopping list, should be 35', ()=>{
         const shoppingList = "CD"
-        expect(sumValues(shoppingList)).toBe(35);
+        expect(priceOf(shoppingList)).toBe(35);
       })
       test('total value of "CDBA" shopping list, should be 115', ()=>{
         const shoppingList = "CDBA"
-        expect(sumValues(shoppingList)).toBe(115);
+        expect(priceOf(shoppingList)).toBe(115);
       })
     })
     describe('Shopping list with multi priced products', ()=>{
       test('total value of "AAA" shopping list, should be 130', ()=>{
         const shoppingList = "AAA"
-        expect(sumValues(shoppingList)).toBe(130);
+        expect(priceOf(shoppingList)).toBe(130);
       })
       test('total value of "BB" shopping list, should be 45', ()=>{
         const shoppingList = "BB"
-        expect(sumValues(shoppingList)).toBe(45);
+        expect(priceOf(shoppingList)).toBe(45);
       })
       test('total value of "AAABB" shopping list, should be 175', ()=>{
         const shoppingList = "AAABB"
-        expect(sumValues(shoppingList)).toBe(175);
+        expect(priceOf(shoppingList)).toBe(175);
       })
       test('total value of "ABACDACDB" shopping list, should be 245', ()=>{
         const shoppingList = "ABACDACDB"
-        expect(sumValues(shoppingList)).toBe(245);
+        expect(priceOf(shoppingList)).toBe(245);
       })
     })
   })
