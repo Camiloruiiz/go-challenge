@@ -9,3 +9,14 @@ export function getProductValue(product) {
   let productValue = priceList[product]
   return productValue
 }
+
+export function sumValues(shoppingList) {
+  let listByProduct = shoppingList.split('')
+  let totalValue = 0
+
+  listByProduct.forEach(element => {
+    totalValue += getProductValue(element)
+  });
+
+  return totalValue
+}

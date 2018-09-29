@@ -1,7 +1,6 @@
 import {priceList, getProductValue, sumValues} from '../index.js'
 
 describe('Supermarket checkout process',()=> {
-  
   describe('Products values', ()=> {
     test('Product A value should be equal to 50', ()=> {
       expect(priceList['A']).toBe(50);
@@ -28,7 +27,13 @@ describe('Supermarket checkout process',()=> {
         const shoppingList = "AB"
         expect(sumValues(shoppingList)).toBe(80);
       })
+      test('total value of "BC" shopping list, should be 50', ()=>{
+        const shoppingList = "BC"
+        expect(sumValues(shoppingList)).toBe(50);
+      })
+      test('total value of "CD" shopping list, should be 35', ()=>{
+        const shoppingList = "CD"
+        expect(sumValues(shoppingList)).toBe(35);
+      })
     })
   })
-
-})
