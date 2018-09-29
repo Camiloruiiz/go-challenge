@@ -54,6 +54,14 @@ describe('Supermarket checkout process',()=> {
         const shoppingList = "BB"
         expect(sumValues(shoppingList)).toBe(45);
       })
+      test('total value of "AAABB" shopping list, should be 175', ()=>{
+        const shoppingList = "AAABB"
+        expect(sumValues(shoppingList)).toBe(175);
+      })
+      test('total value of "ABACDACDB" shopping list, should be 245', ()=>{
+        const shoppingList = "ABACDACDB"
+        expect(sumValues(shoppingList)).toBe(245);
+      })
     })
   })
 })
