@@ -1,5 +1,6 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production'
-    ? '/go-compare-challenge/'
+  outputDir: 'docs',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/go-challenge/'
     : '/'
 }
