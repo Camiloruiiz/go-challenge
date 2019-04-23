@@ -1,5 +1,5 @@
 {
-  "name": "go-compare-challenge",
+  "name": "go-challenge",
   "version": "1.0.0",
   "description": "go compare challenge",
   "main": "index.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/Camiloruiiz/go-compare-challenge.git"
+    "url": "git+https://github.com/Camiloruiiz/go-challenge.git"
   },
   "author": "Oscar Camilo Ruiz",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/Camiloruiiz/go-compare-challenge/issues"
+    "url": "https://github.com/Camiloruiiz/go-challenge/issues"
   },
-  "homepage": "https://gitlab.com/Camiloruiiz/go-compare-challenge#readme",
+  "homepage": "https://github.com/Camiloruiiz/go-challenge#readme",
   "dependencies": {
     "vue": "^2.6.10"
   },
